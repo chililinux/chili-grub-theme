@@ -1,0 +1,9 @@
+[Trigger]
+Type      = Package
+Operation = Install
+Target    = chili-grub-theme
+
+[Action]
+Description = Chili install grub theme for ChiliLilinux
+When        = PostTransaction
+Exec        = /usr/share/libalpm/scripts/chili-grub-theme-install.sh

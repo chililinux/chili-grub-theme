@@ -1,7 +1,7 @@
 # Maintainer: Vilmar Catafesta <vcatafesta@gmail.com>
 
-pkgname=chili-pkgname
-pkgdesc="Package template for Chililinux"
+pkgname=chili-grub-theme
+pkgdesc="Grub theme for ChiliLinux"
 #depends=('')
 #makedepends=('')
 #optdepends=('')
@@ -50,6 +50,9 @@ package() {
 	else
 		srcdir="${srcdir}/${pkgname}"
 	fi
+
+  cp -r "${srcdir}/${pkgname}/boot/" "${pkgdir}/"
+  cp -r "${srcdir}/${pkgname}/usr/" "${pkgdir}/"
 
 	# Install files
 	local dirs=("usr" "etc" "opt")
