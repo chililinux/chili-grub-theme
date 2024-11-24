@@ -51,11 +51,8 @@ package() {
 		srcdir="${srcdir}/${pkgname}"
 	fi
 
-  cp -r "${srcdir}/${pkgname}/boot/" "${pkgdir}/"
-  cp -r "${srcdir}/${pkgname}/usr/" "${pkgdir}/"
-
 	# Install files
-	local dirs=("usr" "etc" "opt")
+	local dirs=('usr' 'etc' 'opt' 'boot')
 	for dir in "${dirs[@]}"; do
 		if [ -d "${srcdir}/${dir}" ]; then
 			cp -a "${srcdir}/${dir}" "${pkgdir}/"
